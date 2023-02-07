@@ -18,6 +18,7 @@ Following boards are also included but are not officially supported:
 
 - [Nordic nRF52840DK PCA10056](https://www.nordicsemi.com/Software-and-Tools/Development-Kits/nRF52840-DK)
 - [Particle Xenon](https://store.particle.io/products/xenon)
+- [SparkFun Thing Plus NINA-B306](https://www.sparkfun.com/products/20854)
 
 ## BSP Installation
 

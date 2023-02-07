@@ -665,3 +665,69 @@ particle_xenon.menu.debug_output.serial1=Serial1
 particle_xenon.menu.debug_output.serial1.build.logger_flags=-DCFG_LOGGER=1 -DCFG_TUSB_DEBUG=CFG_DEBUG
 particle_xenon.menu.debug_output.rtt=Segger RTT
 particle_xenon.menu.debug_output.rtt.build.logger_flags=-DCFG_LOGGER=2 -DCFG_TUSB_DEBUG=CFG_DEBUG -DSEGGER_RTT_MODE_DEFAULT=SEGGER_RTT_MODE_BLOCK_IF_FIFO_FULL
+
+# -----------------------------------
+# SparkFun Thing Plus NINA-B306
+# -----------------------------------
+sfe_thingplus_ninab306.name=SparkFun Thing Plus NINA-B306
+
+# VID/PID for Bootloader, Arduino & CircuitPython
+sfe_thingplus_ninab306.vid.0=0x1B4F
+sfe_thingplus_ninab306.pid.0=0x0030
+sfe_thingplus_ninab306.vid.1=0x1B4F
+sfe_thingplus_ninab306.pid.1=0x0031
+sfe_thingplus_ninab306.vid.2=0x1B4F
+sfe_thingplus_ninab306.pid.2=0x0032
+sfe_thingplus_ninab306.vid.3=0x1B4F
+sfe_thingplus_ninab306.pid.3=0x0033
+
+# Upload
+sfe_thingplus_ninab306.bootloader.tool=bootburn
+sfe_thingplus_ninab306.upload.tool=nrfutil
+sfe_thingplus_ninab306.upload.protocol=nrfutil
+sfe_thingplus_ninab306.upload.use_1200bps_touch=true
+sfe_thingplus_ninab306.upload.wait_for_upload_port=true
+sfe_thingplus_ninab306.upload.maximum_size=815104
+sfe_thingplus_ninab306.upload.maximum_data_size=237568
+
+# Build
+sfe_thingplus_ninab306.build.mcu=cortex-m4
+sfe_thingplus_ninab306.build.f_cpu=64000000
+sfe_thingplus_ninab306.build.board=SFE_THINGPLUS_NINAB306
+sfe_thingplus_ninab306.build.core=nRF5
+sfe_thingplus_ninab306.build.variant=sfe_thingplus_ninab306
+sfe_thingplus_ninab306.build.usb_manufacturer="SparkFun Electronics"
+sfe_thingplus_ninab306.build.usb_product="Thing Plus NINA-B306"
+sfe_thingplus_ninab306.build.extra_flags=-DNRF52840_XXAA {build.flags.usb}
+sfe_thingplus_ninab306.build.ldscript=nrf52840_s140_v6.ld
+sfe_thingplus_ninab306.build.vid=0x1B4F
+sfe_thingplus_ninab306.build.pid=0x0030
+sfe_thingplus_ninab306.build.bootloader_version=0.7.0
+
+# Bootloader
+sfe_thingplus_ninab306.tools.bootburn.bootloader.file={runtime.platform.path}/bootloader/{build.variant}/{build.variant}_bootloader-{build.bootloader_version}_{build.sd_name}_{build.sd_version}
+
+# SoftDevice Menu
+sfe_thingplus_ninab306.menu.softdevice.s140v6=S140 6.1.1
+sfe_thingplus_ninab306.menu.softdevice.s140v6.build.sd_name=s140
+sfe_thingplus_ninab306.menu.softdevice.s140v6.build.sd_version=6.1.1
+sfe_thingplus_ninab306.menu.softdevice.s140v6.build.sd_fwid=0x00B6
+
+# Debug Menu
+sfe_thingplus_ninab306.menu.debug.l0=Level 0 (Release)
+sfe_thingplus_ninab306.menu.debug.l0.build.debug_flags=-DCFG_DEBUG=0
+sfe_thingplus_ninab306.menu.debug.l1=Level 1 (Error Message)
+sfe_thingplus_ninab306.menu.debug.l1.build.debug_flags=-DCFG_DEBUG=1
+sfe_thingplus_ninab306.menu.debug.l2=Level 2 (Full Debug)
+sfe_thingplus_ninab306.menu.debug.l2.build.debug_flags=-DCFG_DEBUG=2
+sfe_thingplus_ninab306.menu.debug.l3=Level 3 (Segger SystemView)
+sfe_thingplus_ninab306.menu.debug.l3.build.debug_flags=-DCFG_DEBUG=3
+sfe_thingplus_ninab306.menu.debug.l3.build.sysview_flags=-DCFG_SYSVIEW=1
+
+# Debug Output Menu
+sfe_thingplus_ninab306.menu.debug_output.serial=Serial
+sfe_thingplus_ninab306.menu.debug_output.serial.build.logger_flags=-DCFG_LOGGER=0
+sfe_thingplus_ninab306.menu.debug_output.serial1=Serial1
+sfe_thingplus_ninab306.menu.debug_output.serial1.build.logger_flags=-DCFG_LOGGER=1 -DCFG_TUSB_DEBUG=CFG_DEBUG
+sfe_thingplus_ninab306.menu.debug_output.rtt=Segger RTT
+sfe_thingplus_ninab306.menu.debug_output.rtt.build.logger_flags=-DCFG_LOGGER=2 -DCFG_TUSB_DEBUG=CFG_DEBUG -DSEGGER_RTT_MODE_DEFAULT=SEGGER_RTT_MODE_BLOCK_IF_FIFO_FULL
